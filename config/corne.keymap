@@ -151,6 +151,14 @@
             bindings = <&sk LEFT_GUI>, <&terminal_win>, <&screenshot_win>;
         };
 
+        td_multi_alt: tap_dance_multi_alt {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_MULTI_ALT";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LEFT_ALT>, <&kp LA(LEFT_SHIFT)>;
+        };
+
         td_multi_mac: tap_dance_multi_mac {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_MULTI_MAC";
@@ -166,7 +174,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
             flavor = "balanced";
-            bindings = <&mo>, <&kp>;
+            bindings = <&kp>, <&kp>;
         };
 
         sm: space_mod {
@@ -186,80 +194,80 @@
         windows_default_layer {
             label = "Windows";
             bindings = <
-&none  &kp Q               &kp W  &kp E          &kp R         &kp T                   &kp Y      &kp U                  &kp I               &kp O    &kp P          &none
-&none  &kp A               &kp S  &kp D          &kp F         &kp G                   &kp H      &kp J                  &kp K               &kp L    &kp SEMICOLON  &none
-&none  &mt LEFT_CONTROL Z  &kp X  &kp C          &kp V         &kp B                   &kp N      &kp M                  &kp COMMA           &kp DOT  &kp SLASH      &none
-                                  &kp LEFT_ALT   &mo WIN_CODE  &sm LEFT_SHIFT SPACE    &kp ENTER  &bm WIN_NUM BACKSPACE  &kp LC(LEFT_SHIFT)
+&none  &kp Q               &kp W  &kp E          &kp R         &kp T                   &kp Y      &kp U        &kp I               &kp O    &kp P          &none
+&none  &kp A               &kp S  &kp D          &kp F         &kp G                   &kp H      &kp J        &kp K               &kp L    &kp SEMICOLON  &none
+&none  &mt LEFT_CONTROL Z  &kp X  &kp C          &kp V         &kp B                   &kp N      &kp M        &kp COMMA           &kp DOT  &kp SLASH      &none
+                                  &td_multi_alt  &mo WIN_CODE  &sm LEFT_SHIFT SPACE    &kp ENTER  &mo WIN_NUM  &bm LC(LEFT_SHIFT) BACKSPACE
             >;
         };
 
         windows_code_layer {
             label = "WinCode";
             bindings = <
-&none  &kp EXCLAMATION      &kp AT  &kp HASH              &kp DOLLAR      &kp PERCENT             &kp CARET  &kp AMPERSAND           &kp STAR            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
-&none  &kp C_AL_CALCULATOR  &none   &kp NON_US_BACKSLASH  &kp MINUS       &kp EQUAL               &kp GRAVE  &kp SINGLE_QUOTE        &kp COLON           &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none
-&none  &sk LEFT_CONTROL     &none   &kp PIPE              &kp UNDERSCORE  &kp PLUS                &kp TILDE  &kp DOUBLE_QUOTES       &kp SLASH           &kp LEFT_BRACE        &kp RIGHT_BRACE        &none
-                                    &kp LEFT_ALT          &trans          &sm LEFT_SHIFT SPACE    &kp ENTER  &bm WIN_NUM BACKSPACE   &kp LC(LEFT_SHIFT)
+&none  &kp EXCLAMATION      &kp AT  &kp HASH           &kp DOLLAR      &kp PERCENT    &kp CARET  &kp AMPERSAND      &kp STAR              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
+&none  &kp C_AL_CALCULATOR  &none   &kp LA(LS(EQUAL))  &kp MINUS       &kp EQUAL      &kp GRAVE  &kp SINGLE_QUOTE   &kp NON_US_BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none
+&none  &sk LEFT_CONTROL     &none   &kp LA(LS(MINUS))  &kp UNDERSCORE  &kp PLUS       &kp TILDE  &kp DOUBLE_QUOTES  &kp PIPE              &kp LEFT_BRACE        &kp RIGHT_BRACE        &none
+                                    &trans             &trans          &trans         &trans     &mo WIN_NUM        &trans
             >;
         };
 
         windows_number_layer {
             label = "WinNum";
             bindings = <
-&none  &kp NUMBER_1         &kp NUMBER_2  &kp NUMBER_3   &kp NUMBER_4  &kp NUMBER_5            &kp NUMBER_6   &kp NUMBER_7     &kp NUMBER_8        &kp NUMBER_9  &kp NUMBER_0     &none
-&none  &kp C_AL_CALCULATOR  &none         &none          &kp MINUS     &kp HOME                &kp PAGE_UP    &kp LEFT_ARROW   &kp DOWN_ARROW      &kp UP_ARROW  &kp RIGHT_ARROW  &none
-&none  &sk LEFT_CONTROL     &none         &none          &none         &kp END                 &kp PAGE_DOWN  &none            &sk LEFT_ALT        &kp LC(Z)     &kp LC(TAB)      &none
-                                          &kp LEFT_ALT   &mo WIN_CODE  &sm LEFT_SHIFT SPACE    &kp ENTER      &trans           &kp LC(LEFT_SHIFT)
+&none  &kp NUMBER_1         &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7     &kp NUMBER_8    &kp NUMBER_9  &kp NUMBER_0     &none
+&none  &kp C_AL_CALCULATOR  &none         &none         &kp MINUS     &kp HOME        &kp PAGE_UP    &kp LEFT_ARROW   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
+&none  &sk LEFT_CONTROL     &none         &none         &none         &kp END         &kp PAGE_DOWN  &none            &none           &kp LC(Z)     &kp LC(TAB)      &none
+                                          &trans        &mo WIN_CODE  &trans          &trans         &trans           &trans
             >;
         };
 
         windows_function_layer {
             label = "WinFunc";
             bindings = <
-&none  &kp F1                &kp F2   &kp F3          &kp F4            &kp F5                  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2        &bt BT_SEL 3  &bt BT_SEL 4  &none
-&none  &kp F6                &kp F7   &kp F8          &kp F9            &kp F10                 &bt BT_CLR    &none            &none               &to GAME_DEF  &to MAC_DEF   &none
-&none  &mt LEFT_CONTROL F11  &kp F12  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT              &kp C_MUTE    &kp C_VOLUME_UP  &kp C_VOLUME_DOWN   &none         &none         &none
-                                      &kp LEFT_ALT    &trans            &sm LEFT_SHIFT SPACE    &kp ENTER     &trans           &kp LC(LEFT_SHIFT)
+&none  &kp F1                &kp F2   &kp F3          &kp F4            &kp F5        &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4  &none
+&none  &kp F6                &kp F7   &kp F8          &kp F9            &kp F10       &bt BT_CLR    &none            &none              &to GAME_DEF  &to MAC_DEF   &none
+&none  &mt LEFT_CONTROL F11  &kp F12  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT    &kp C_MUTE    &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &none         &none         &none
+                                      &trans          &trans            &trans        &trans        &trans           &trans
             >;
         };
 
         mac_default_layer {
             label = "MacOS";
             bindings = <
-&none  &kp Q               &kp W  &kp E          &kp R         &kp T                   &kp Y      &kp U                  &kp I               &kp O    &kp P          &none
-&none  &kp A               &kp S  &kp D          &kp F         &kp G                   &kp H      &kp J                  &kp K               &kp L    &kp SEMICOLON  &none
-&none  &mt LEFT_CONTROL Z  &kp X  &kp C          &kp V         &kp B                   &kp N      &kp M                  &kp COMMA           &kp DOT  &kp SLASH      &none
-                                  &kp LEFT_GUI   &mo MAC_CODE  &sm LEFT_SHIFT SPACE    &kp ENTER  &bm MAC_NUM BACKSPACE  &kp LC(LEFT_SHIFT)
+&none  &kp Q               &kp W  &kp E          &kp R         &kp T                   &kp Y      &kp U        &kp I                         &kp O    &kp P          &none
+&none  &kp A               &kp S  &kp D          &kp F         &kp G                   &kp H      &kp J        &kp K                         &kp L    &kp SEMICOLON  &none
+&none  &mt LEFT_CONTROL Z  &kp X  &kp C          &kp V         &kp B                   &kp N      &kp M        &kp COMMA                     &kp DOT  &kp SLASH      &none
+                                  &kp LEFT_GUI   &mo MAC_CODE  &sm LEFT_SHIFT SPACE    &kp ENTER  &mo MAC_NUM  &bm LC(LEFT_SHIFT) BACKSPACE
             >;
         };
 
         mac_code_layer {
             label = "MacCode";
             bindings = <
-&none  &kp EXCLAMATION   &kp AT           &kp HASH              &kp DOLLAR      &kp PERCENT             &kp CARET  &kp AMPERSAND           &kp STAR            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
-&none  &sk GLOBE         &fullscreen_mac  &kp NON_US_BACKSLASH  &kp MINUS       &kp EQUAL               &kp GRAVE  &kp SINGLE_QUOTE        &kp COLON           &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none
-&none  &sk LEFT_CONTROL  &none            &kp PIPE              &kp UNDERSCORE  &kp PLUS                &kp TILDE  &kp DOUBLE_QUOTES       &kp SLASH           &kp LEFT_BRACE        &kp RIGHT_BRACE        &none
-                                          &kp LEFT_GUI          &trans          &sm LEFT_SHIFT SPACE    &kp ENTER  &bm MAC_NUM BACKSPACE   &kp LC(LEFT_SHIFT)
+&none  &kp EXCLAMATION   &kp AT           &kp HASH       &kp DOLLAR      &kp PERCENT    &kp CARET  &kp AMPERSAND      &kp STAR              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
+&none  &sk GLOBE         &fullscreen_mac  &kp LG(D)      &kp MINUS       &kp EQUAL      &kp GRAVE  &kp SINGLE_QUOTE   &kp NON_US_BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none
+&none  &sk LEFT_CONTROL  &none            &kp LG(LS(D))  &kp UNDERSCORE  &kp PLUS       &kp TILDE  &kp DOUBLE_QUOTES  &kp PIPE              &kp LEFT_BRACE        &kp RIGHT_BRACE        &none
+                                          &trans         &trans          &trans         &trans     &mo MAC_NUM        &trans
             >;
         };
 
         mac_number_layer {
             label = "MacNum";
             bindings = <
-&none  &kp NUMBER_1      &kp NUMBER_2     &kp NUMBER_3   &kp NUMBER_4  &kp NUMBER_5            &kp NUMBER_6   &kp NUMBER_7    &kp NUMBER_8        &kp NUMBER_9  &kp NUMBER_0     &none
-&none  &sk GLOBE         &fullscreen_mac  &none          &kp MINUS     &kp HOME                &kp PAGE_UP    &kp LEFT_ARROW  &kp DOWN_ARROW      &kp UP_ARROW  &kp RIGHT_ARROW  &none
-&none  &sk LEFT_CONTROL  &none            &none          &none         &kp END                 &kp PAGE_DOWN  &none           &sk LEFT_ALT        &kp LG(Z)     &kp LG(TAB)      &none
-                                          &kp LEFT_GUI   &mo MAC_CODE  &sm LEFT_SHIFT SPACE    &kp ENTER      &trans          &kp LC(LEFT_SHIFT)
+&none  &kp NUMBER_1      &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7    &kp NUMBER_8        &kp NUMBER_9  &kp NUMBER_0     &none
+&none  &sk GLOBE         &fullscreen_mac  &none         &kp MINUS     &kp HOME        &kp PAGE_UP    &kp LEFT_ARROW  &kp DOWN_ARROW      &kp UP_ARROW  &kp RIGHT_ARROW  &none
+&none  &sk LEFT_CONTROL  &none            &none         &none         &kp END         &kp PAGE_DOWN  &none           &sk LEFT_ALT        &kp LG(Z)     &kp LG(TAB)      &none
+                                          &trans        &mo MAC_CODE  &trans          &trans         &trans          &trans
             >;
         };
 
         mac_function_layer {
             label = "MacFunc";
             bindings = <
-&none  &kp F1                &kp F2   &kp F3          &kp F4            &kp F5                  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2        &bt BT_SEL 3  &bt BT_SEL 4  &none
-&none  &kp F6                &kp F7   &kp F8          &kp F9            &kp F10                 &bt BT_CLR    &none            &none               &to GAME_DEF  &to WIN_DEF   &none
-&none  &mt LEFT_CONTROL F11  &kp F12  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT              &kp C_MUTE    &kp C_VOLUME_UP  &kp C_VOLUME_DOWN   &none         &none         &none
-                                      &kp LEFT_GUI    &trans            &sm LEFT_SHIFT SPACE    &kp ENTER     &trans           &kp LC(LEFT_SHIFT)
+&none  &kp F1                &kp F2   &kp F3          &kp F4            &kp F5        &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2        &bt BT_SEL 3  &bt BT_SEL 4  &none
+&none  &kp F6                &kp F7   &kp F8          &kp F9            &kp F10       &bt BT_CLR    &none            &none               &to GAME_DEF  &to WIN_DEF   &none
+&none  &mt LEFT_CONTROL F11  &kp F12  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT    &kp C_MUTE    &kp C_VOLUME_UP  &kp C_VOLUME_DOWN   &none         &none         &none
+                                      &trans          &trans            &trans        &trans        &trans           &trans
             >;
         };
 
