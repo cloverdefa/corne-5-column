@@ -165,6 +165,14 @@
             bindings = <&kp LEFT_ALT>, <&kp LA(LEFT_SHIFT)>;
         };
 
+        td_multi_cmd: tap_dance_multi_command {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_MULTI_CMD";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp LEFT_GUI>, <&kp LA(LEFT_GUI)>;
+        };
+
         sm: space_mod {
             compatible = "zmk,behavior-hold-tap";
             label = "SPACE_MOD";
@@ -248,7 +256,7 @@
 &none  &kp Q               &kp W  &kp E          &kp R         &kp T                   &kp Y      &kp U        &kp I                         &kp O    &kp P          &none
 &none  &kp A               &kp S  &kp D          &kp F         &kp G                   &kp H      &kp J        &kp K                         &kp L    &kp SEMICOLON  &none
 &none  &mt LEFT_CONTROL Z  &kp X  &kp C          &kp V         &kp B                   &kp N      &kp M        &kp COMMA                     &kp DOT  &kp SLASH      &none
-                                  &kp LEFT_GUI   &mo MAC_CODE  &sm LEFT_SHIFT SPACE    &kp ENTER  &mo MAC_NUM  &kp LC(LEFT_SHIFT)
+                                  &td_multi_cmd  &mo MAC_CODE  &sm LEFT_SHIFT SPACE    &kp ENTER  &mo MAC_NUM  &kp LC(LEFT_SHIFT)
             >;
         };
 
