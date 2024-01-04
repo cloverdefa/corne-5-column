@@ -127,6 +127,20 @@
             layers = <0 1 2 3 4 5 6 7>;
         };
 
+        combo_TAB_WIN {
+            bindings = <&kp LC(TAB)>;
+            key-positions = <21 22>;
+            timeout-ms = <100>;
+            layers = <0 1 2 3>;
+        };
+
+        combo_TAB_MAC {
+            bindings = <&kp LG(TAB)>;
+            key-positions = <21 22>;
+            timeout-ms = <100>;
+            layers = <4 5 6 7>;
+        };
+
         combo_TD_MULTI_WIN {
             bindings = <&td_multi_win>;
             key-positions = <33 34>;
