@@ -113,8 +113,8 @@
             layers = <0 1 2 3 4 5 6 7>;
         };
 
-        combo_DEL {
-            bindings = <&kp DEL>;
+        combo_BACKSPACE {
+            bindings = <&kp BACKSPACE>;
             key-positions = <9 10>;
             timeout-ms = <100>;
             layers = <0 1 2 3 4 5 6 7>;
