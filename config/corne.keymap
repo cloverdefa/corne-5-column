@@ -134,6 +134,13 @@
             layers = <0 1 2 3 4 5 6 7>;
         };
 
+        combo_BT_CLR {
+            bindings = <&bt BT_CLR>;
+            key-positions = <18 22>;
+            timeout-ms = <20>;
+            layers = <3 7>;
+        };
+
         combo_TD_MULTI_WIN {
             bindings = <&td_multi_win>;
             key-positions = <33 34>;
@@ -237,7 +244,7 @@
             label = "WinFunc";
             bindings = <
 &none  &kp F1                &kp F2   &kp F3          &kp F4      &kp F5              &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4  &none
-&none  &kp F6                &kp F7   &kp F8          &kp F9      &kp F10             &bt BT_CLR    &to MAC_DEF      &to GAME_DEF       &none         &none         &none
+&none  &kp F6                &kp F7   &kp F8          &kp F9      &kp F10             &none         &to MAC_DEF      &to GAME_DEF       &none         &none         &none
 &none  &mt LEFT_CONTROL F11  &kp F12  &kp C_PREVIOUS  &kp C_NEXT  &kp C_PLAY_PAUSE    &kp C_MUTE    &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &none         &none         &none
                                       &trans          &trans      &trans              &trans        &trans           &trans
             >;
@@ -277,7 +284,7 @@
             label = "MacFunc";
             bindings = <
 &none  &kp F1                &kp F2   &kp F3          &kp F4      &kp F5              &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2        &bt BT_SEL 3  &bt BT_SEL 4  &none
-&none  &kp F6                &kp F7   &kp F8          &kp F9      &kp F10             &bt BT_CLR    &to WIN_DEF      &to GAME_DEF        &none         &none         &none
+&none  &kp F6                &kp F7   &kp F8          &kp F9      &kp F10             &none         &to WIN_DEF      &to GAME_DEF        &none         &none         &none
 &none  &mt LEFT_CONTROL F11  &kp F12  &kp C_PREVIOUS  &kp C_NEXT  &kp C_PLAY_PAUSE    &kp C_MUTE    &kp C_VOLUME_UP  &kp C_VOLUME_DOWN   &none         &none         &none
                                       &trans          &trans      &trans              &trans        &trans           &trans
             >;
