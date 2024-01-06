@@ -224,7 +224,7 @@
             label = "WinCode";
             bindings = <
 &none  &kp EXCLAMATION   &kp AT  &kp HASH           &kp DOLLAR      &kp PERCENT    &kp CARET  &kp AMPERSAND      &kp STAR              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
-&none  &none             &none   &kp LA(LS(EQUAL))  &kp MINUS       &kp EQUAL      &kp GRAVE  &kp SINGLE_QUOTE   &kp NON_US_BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none
+&none  &kp LA(F4)        &none   &kp LA(LS(EQUAL))  &kp MINUS       &kp EQUAL      &kp GRAVE  &kp SINGLE_QUOTE   &kp NON_US_BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none
 &none  &sk LEFT_CONTROL  &none   &kp LA(LS(MINUS))  &kp UNDERSCORE  &kp PLUS       &kp TILDE  &kp DOUBLE_QUOTES  &kp PIPE              &kp LEFT_BRACE        &kp RIGHT_BRACE        &none
                                  &trans             &trans          &trans         &trans     &mo WIN_NUM        &trans
             >;
@@ -234,7 +234,7 @@
             label = "WinNum";
             bindings = <
 &none  &kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7     &kp NUMBER_8    &kp NUMBER_9  &kp NUMBER_0     &none
-&none  &none             &none         &none         &kp MINUS     &kp HOME        &kp PAGE_UP    &kp LEFT_ARROW   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
+&none  &kp LA(F4)        &none         &none         &kp MINUS     &kp HOME        &kp PAGE_UP    &kp LEFT_ARROW   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
 &none  &sk LEFT_CONTROL  &none         &none         &none         &kp END         &kp PAGE_DOWN  &none            &none           &kp LC(Z)     &kp LC(TAB)      &none
                                        &trans        &mo WIN_CODE  &trans          &trans         &trans           &trans
             >;
