@@ -235,7 +235,7 @@
             bindings = <
 &none  &kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7     &kp NUMBER_8    &kp NUMBER_9  &kp NUMBER_0     &none
 &none  &sk LEFT_CONTROL  &none         &none         &kp MINUS     &kp HOME        &kp PAGE_UP    &kp LEFT_ARROW   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
-&none  &kp ESC           &none         &none         &none         &kp END         &kp PAGE_DOWN  &none            &none           &kp LC(Z)     &kp LC(TAB)      &none
+&none  &kp ESC           &none         &none         &none         &kp END         &kp PAGE_DOWN  &none            &kp LC(A)       &kp LC(Z)     &kp LC(TAB)      &none
                                        &trans        &mo WIN_CODE  &trans          &trans         &trans           &trans
             >;
         };
@@ -273,9 +273,9 @@
         mac_number_layer {
             label = "MacNum";
             bindings = <
-&none  &kp NUMBER_1      &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7    &kp NUMBER_8        &kp NUMBER_9  &kp NUMBER_0     &none
-&none  &sk LEFT_CONTROL  &fullscreen_mac  &none         &kp MINUS     &kp HOME        &kp PAGE_UP    &kp LEFT_ARROW  &kp DOWN_ARROW      &kp UP_ARROW  &kp RIGHT_ARROW  &none
-&none  &kp ESC           &none            &none         &none         &kp END         &kp PAGE_DOWN  &none           &sk LEFT_ALT        &kp LG(Z)     &kp LG(TAB)      &none
+&none  &kp NUMBER_1      &kp NUMBER_2     &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7    &kp NUMBER_8     &kp NUMBER_9  &kp NUMBER_0     &none
+&none  &sk LEFT_CONTROL  &fullscreen_mac  &none         &kp MINUS     &kp HOME        &kp PAGE_UP    &kp LEFT_ARROW  &kp DOWN_ARROW   &kp UP_ARROW  &kp RIGHT_ARROW  &none
+&none  &kp ESC           &none            &none         &none         &kp END         &kp PAGE_DOWN  &none           &kp LC(A)        &kp LG(Z)     &kp LC(TAB)      &none
                                           &trans        &mo MAC_CODE  &trans          &trans         &trans          &trans
             >;
         };
