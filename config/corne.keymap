@@ -127,6 +127,13 @@
             layers = <0 1 2 3 4 5 6 7>;
         };
 
+        combo_ESC {
+            bindings = <&kp ESC>;
+            key-positions = <25 26>;
+            timeout-ms = <20>;
+            layers = <0 1 2 3 4 5 6 7>;
+        };
+
         combo_BT_CLR {
             bindings = <&bt BT_CLR>;
             key-positions = <18 22>;
