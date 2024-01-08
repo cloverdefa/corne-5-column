@@ -113,8 +113,8 @@
             layers = <0 1 2 3 4 5 6 7>;
         };
 
-        combo_BACKSPACE {
-            bindings = <&bspc_del>;
+        combo_DEL {
+            bindings = <&kp DEL>;
             key-positions = <9 10>;
             timeout-ms = <20>;
             layers = <0 1 2 3 4 5 6 7>;
@@ -189,10 +189,10 @@
             bindings = <&kp LEFT_GUI>, <&kp LA(LEFT_GUI)>;
         };
 
-        bspc_del: backspace_delete {
+        mod_pdel: mof_p_delete {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            bindings = <&kp P>, <&kp BACKSPACE>;
             mods = <(MOD_LSFT)>;
         };
 
@@ -213,7 +213,7 @@
         windows_default_layer {
             label = "Windows";
             bindings = <
-&none  &kp Q               &kp W  &kp E          &kp R         &kp T                   &kp Y      &kp U        &kp I               &kp O    &kp P          &none
+&none  &kp Q               &kp W  &kp E          &kp R         &kp T                   &kp Y      &kp U        &kp I               &kp O    &mof_p_delete  &none
 &none  &mt LEFT_CONTROL A  &kp S  &kp D          &kp F         &kp G                   &kp H      &kp J        &kp K               &kp L    &kp SEMICOLON  &none
 &none  &kp Z               &kp X  &kp C          &kp V         &kp B                   &kp N      &kp M        &kp COMMA           &kp DOT  &kp SLASH      &none
                                   &td_multi_alt  &mo WIN_CODE  &sm LEFT_SHIFT SPACE    &kp ENTER  &mo WIN_NUM  &kp LC(LEFT_SHIFT)
@@ -253,7 +253,7 @@
         mac_default_layer {
             label = "MacOS";
             bindings = <
-&none  &kp Q               &kp W  &kp E          &kp R         &kp T                   &kp Y      &kp U        &kp I               &kp O    &kp P          &none
+&none  &kp Q               &kp W  &kp E          &kp R         &kp T                   &kp Y      &kp U        &kp I               &kp O    &mof_p_delete  &none
 &none  &kp A               &kp S  &kp D          &kp F         &kp G                   &kp H      &kp J        &kp K               &kp L    &kp SEMICOLON  &none
 &none  &mt LEFT_CONTROL Z  &kp X  &kp C          &kp V         &kp B                   &kp N      &kp M        &kp COMMA           &kp DOT  &kp SLASH      &none
                                   &td_multi_cmd  &mo MAC_CODE  &sm LEFT_SHIFT SPACE    &kp ENTER  &mo MAC_NUM  &kp LC(LEFT_SHIFT)
