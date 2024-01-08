@@ -120,13 +120,6 @@
             layers = <0 1 2 3 4 5 6 7>;
         };
 
-        combo_ESC {
-            bindings = <&kp ESC>;
-            key-positions = <13 14>;
-            timeout-ms = <20>;
-            layers = <0 1 2 3 4 5 6 7>;
-        };
-
         combo_CTRL_TAB {
             bindings = <&kp LC(TAB)>;
             key-positions = <21 22>;
