@@ -254,8 +254,8 @@
             label = "MacOS";
             bindings = <
 &none  &kp Q               &kp W  &kp E          &kp R         &kp T                   &kp Y      &kp U        &kp I               &kp O    &mod_pdel      &none
-&none  &kp A               &kp S  &kp D          &kp F         &kp G                   &kp H      &kp J        &kp K               &kp L    &kp SEMICOLON  &none
-&none  &mt LEFT_CONTROL Z  &kp X  &kp C          &kp V         &kp B                   &kp N      &kp M        &kp COMMA           &kp DOT  &kp SLASH      &none
+&none  &mt LEFT_CONTROL A  &kp S  &kp D          &kp F         &kp G                   &kp H      &kp J        &kp K               &kp L    &kp SEMICOLON  &none
+&none  &kp Z               &kp X  &kp C          &kp V         &kp B                   &kp N      &kp M        &kp COMMA           &kp DOT  &kp SLASH      &none
                                   &td_multi_cmd  &mo MAC_CODE  &sm LEFT_SHIFT SPACE    &kp ENTER  &mo MAC_NUM  &kp LC(LEFT_SHIFT)
             >;
         };
