@@ -106,11 +106,11 @@
             layers = <0 1 2 3 4 5 6 7>;
         };
 
-        combo_CTRL_TAB {
-            bindings = <&kp LC(TAB)>;
+        combo_ALT_F4 {
+            bindings = <&kp LA(F4)>;
             key-positions = <21 22>;
             timeout-ms = <20>;
-            layers = <0 1 2 3 4 5 6 7>;
+            layers = <0>;
         };
 
         combo_ESC {
@@ -259,10 +259,10 @@
         mac_number_layer {
             label = "MacNum";
             bindings = <
-&none  &kp NUMBER_1      &kp NUMBER_2   &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7    &kp NUMBER_8     &kp NUMBER_9  &kp NUMBER_0     &none
-&none  &kp LEFT_CONTROL  &kp LG(LC(F))  &none         &kp MINUS     &kp HOME        &kp PAGE_UP    &kp LEFT_ARROW  &kp DOWN_ARROW   &kp UP_ARROW  &kp RIGHT_ARROW  &none
-&none  &kp ESC           &none          &none         &none         &kp END         &kp PAGE_DOWN  &none           &kp LC(A)        &kp LG(Z)     &kp LC(TAB)      &none
-                                        &trans        &mo MAC_CODE  &trans          &trans         &trans          &trans
+&none  &kp NUMBER_1      &kp NUMBER_2   &kp NUMBER_3   &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7     &kp NUMBER_8     &kp NUMBER_9  &kp NUMBER_0     &none
+&none  &kp LEFT_CONTROL  &kp LG(LC(F))  &kp LS(LG(M))  &kp MINUS     &kp HOME        &kp PAGE_UP    &kp LEFT_ARROW   &kp DOWN_ARROW   &kp UP_ARROW  &kp RIGHT_ARROW  &none
+&none  &kp ESC           &none          &none          &none         &kp END         &kp PAGE_DOWN  &kp LG(LA(ESC))  &kp LG(LC(Q))    &kp LG(Z)     &kp LC(TAB)      &none
+                                        &trans         &mo MAC_CODE  &trans          &trans         &trans           &trans
             >;
         };
 
