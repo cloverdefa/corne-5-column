@@ -249,10 +249,10 @@
         mac_code_layer {
             label = "MacCode";
             bindings = <
-&none  &kp EXCLAMATION   &kp AT         &kp HASH       &kp DOLLAR      &kp PERCENT    &kp CARET  &kp AMPERSAND      &kp STAR              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
-&none  &kp LEFT_CONTROL  &kp LG(LC(F))  &kp LG(D)      &kp MINUS       &kp EQUAL      &kp GRAVE  &kp SINGLE_QUOTE   &kp NON_US_BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none
-&none  &kp ESC           &LG(LA(ESC))   &kp LG(LS(D))  &kp UNDERSCORE  &kp PLUS       &kp TILDE  &kp DOUBLE_QUOTES  &kp PIPE              &kp LEFT_BRACE        &kp RIGHT_BRACE        &none
-                                        &trans         &trans          &trans         &trans     &mo MAC_NUM        &trans
+&none  &kp EXCLAMATION   &kp AT           &kp HASH       &kp DOLLAR      &kp PERCENT    &kp CARET  &kp AMPERSAND      &kp STAR              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
+&none  &kp LEFT_CONTROL  &kp LG(LC(F))    &kp LG(D)      &kp MINUS       &kp EQUAL      &kp GRAVE  &kp SINGLE_QUOTE   &kp NON_US_BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none
+&none  &kp ESC           &kp LG(LA(ESC))  &kp LG(LS(D))  &kp UNDERSCORE  &kp PLUS       &kp TILDE  &kp DOUBLE_QUOTES  &kp PIPE              &kp LEFT_BRACE        &kp RIGHT_BRACE        &none
+                                          &trans         &trans          &trans         &trans     &mo MAC_NUM        &trans
             >;
         };
 
