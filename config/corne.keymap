@@ -251,7 +251,7 @@
             bindings = <
 &none  &kp EXCLAMATION   &kp AT         &kp HASH       &kp DOLLAR      &kp PERCENT    &kp CARET  &kp AMPERSAND      &kp STAR              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
 &none  &kp LEFT_CONTROL  &kp LG(LC(F))  &kp LG(D)      &kp MINUS       &kp EQUAL      &kp GRAVE  &kp SINGLE_QUOTE   &kp NON_US_BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none
-&none  &kp ESC           &none          &kp LG(LS(D))  &kp UNDERSCORE  &kp PLUS       &kp TILDE  &kp DOUBLE_QUOTES  &kp PIPE              &kp LEFT_BRACE        &kp RIGHT_BRACE        &none
+&none  &kp ESC           &LG(LA(ESC))   &kp LG(LS(D))  &kp UNDERSCORE  &kp PLUS       &kp TILDE  &kp DOUBLE_QUOTES  &kp PIPE              &kp LEFT_BRACE        &kp RIGHT_BRACE        &none
                                         &trans         &trans          &trans         &trans     &mo MAC_NUM        &trans
             >;
         };
@@ -259,10 +259,10 @@
         mac_number_layer {
             label = "MacNum";
             bindings = <
-&none  &kp NUMBER_1      &kp NUMBER_2   &kp NUMBER_3   &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7     &kp NUMBER_8     &kp NUMBER_9  &kp NUMBER_0     &none
-&none  &kp LEFT_CONTROL  &kp LG(LC(F))  &kp LS(LG(M))  &kp MINUS     &kp HOME        &kp PAGE_UP    &kp LEFT_ARROW   &kp DOWN_ARROW   &kp UP_ARROW  &kp RIGHT_ARROW  &none
-&none  &kp ESC           &none          &none          &none         &kp END         &kp PAGE_DOWN  &kp LG(LA(ESC))  &kp LG(LC(Q))    &kp LG(Z)     &kp LC(TAB)      &none
-                                        &trans         &mo MAC_CODE  &trans          &trans         &trans           &trans
+&none  &kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7    &kp NUMBER_8     &kp NUMBER_9  &kp NUMBER_0     &none
+&none  &kp LEFT_CONTROL  &none         &none         &kp MINUS     &kp HOME        &kp PAGE_UP    &kp LEFT_ARROW  &kp DOWN_ARROW   &kp UP_ARROW  &kp RIGHT_ARROW  &none
+&none  &kp ESC           &none         &none         &none         &kp END         &kp PAGE_DOWN  &kp LG(GRAVE)   &kp LG(LC(Q))    &kp LG(Z)     &kp LC(TAB)      &none
+                                       &trans        &mo MAC_CODE  &trans          &trans         &trans          &trans
             >;
         };
 
