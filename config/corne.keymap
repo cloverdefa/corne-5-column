@@ -92,6 +92,13 @@
     combos {
         compatible = "zmk,combos";
 
+        combo_BT_CLR {
+            bindings = <&bt BT_CLR>;
+            key-positions = <18 22>;
+            timeout-ms = <20>;
+            layers = <3 7>;
+        };
+
         combo_TAB {
             bindings = <&kp TAB>;
             key-positions = <1 2>;
@@ -118,13 +125,6 @@
             key-positions = <25 26>;
             timeout-ms = <20>;
             layers = <0 1 2 3 4 5 6 7>;
-        };
-
-        combo_BT_CLR {
-            bindings = <&bt BT_CLR>;
-            key-positions = <18 22>;
-            timeout-ms = <20>;
-            layers = <3 7>;
         };
 
         combo_TD_MULTI_WIN {
@@ -197,7 +197,7 @@
         compatible = "zmk,keymap";
 
         windows_default_layer {
-            label = "Windows";
+            display-name = "Windows";
             bindings = <
 &none  &kp Q               &kp W  &kp E          &kp R         &kp T                   &kp Y      &kp U        &kp I               &kp O    &mod_pdel      &none
 &none  &mt LEFT_CONTROL A  &kp S  &kp D          &kp F         &kp G                   &kp H      &kp J        &kp K               &kp L    &kp SEMICOLON  &none
@@ -207,17 +207,17 @@
         };
 
         windows_code_layer {
-            label = "WinCode";
+            display-name = "WinCode";
             bindings = <
-&none  &kp EXCLAMATION   &kp AT  &kp HASH           &kp DOLLAR      &kp PERCENT    &kp CARET  &kp AMPERSAND      &kp STAR              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
-&none  &kp LEFT_CONTROL  &none   &kp LA(LS(EQUAL))  &kp MINUS       &kp EQUAL      &kp GRAVE  &kp SINGLE_QUOTE   &kp NON_US_BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none
-&none  &kp ESC           &none   &kp LA(LS(MINUS))  &kp UNDERSCORE  &kp PLUS       &kp TILDE  &kp DOUBLE_QUOTES  &kp PIPE              &kp LEFT_BRACE        &kp RIGHT_BRACE        &none
-                                 &trans             &trans          &trans         &trans     &mo WIN_NUM        &trans
+&none  &kp EXCLAMATION   &kp AT          &kp HASH           &kp DOLLAR      &kp PERCENT    &kp CARET  &kp AMPERSAND      &kp STAR              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
+&none  &kp LEFT_CONTROL  &kp LG(LCTRL)   &kp LA(LS(EQUAL))  &kp MINUS       &kp EQUAL      &kp GRAVE  &kp SINGLE_QUOTE   &kp NON_US_BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none
+&none  &kp ESC           &kp LG(LC(F4))  &kp LA(LS(MINUS))  &kp UNDERSCORE  &kp PLUS       &kp TILDE  &kp DOUBLE_QUOTES  &kp PIPE              &kp LEFT_BRACE        &kp RIGHT_BRACE        &none
+                                         &trans             &trans          &trans         &trans     &mo WIN_NUM        &trans
             >;
         };
 
         windows_number_layer {
-            label = "WinNum";
+            display-name = "WinNum";
             bindings = <
 &none  &kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7     &kp NUMBER_8    &kp NUMBER_9  &kp NUMBER_0     &none
 &none  &kp LEFT_CONTROL  &none         &none         &kp MINUS     &kp HOME        &kp PAGE_UP    &kp LEFT_ARROW   &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none
@@ -227,7 +227,7 @@
         };
 
         windows_function_layer {
-            label = "WinFunc";
+            display-name = "WinFunc";
             bindings = <
 &none  &kp F1               &kp F2   &kp F3          &kp F4      &kp F5              &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4  &none
 &none  &mt LEFT_CONTROL F6  &kp F7   &kp F8          &kp F9      &kp F10             &none         &to MAC_DEF      &to GAME_DEF       &none         &none         &none
@@ -237,7 +237,7 @@
         };
 
         mac_default_layer {
-            label = "MacOS";
+            display-name = "MacOS";
             bindings = <
 &none  &kp Q               &kp W  &kp E          &kp R         &kp T                   &kp Y      &kp U        &kp I               &kp O    &mod_pdel      &none
 &none  &mt LEFT_CONTROL A  &kp S  &kp D          &kp F         &kp G                   &kp H      &kp J        &kp K               &kp L    &kp SEMICOLON  &none
@@ -247,7 +247,7 @@
         };
 
         mac_code_layer {
-            label = "MacCode";
+            display-name = "MacCode";
             bindings = <
 &none  &kp EXCLAMATION   &kp AT           &kp HASH       &kp DOLLAR      &kp PERCENT    &kp CARET  &kp AMPERSAND      &kp STAR              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
 &none  &kp LEFT_CONTROL  &kp LG(LC(F))    &kp LG(D)      &kp MINUS       &kp EQUAL      &kp GRAVE  &kp SINGLE_QUOTE   &kp NON_US_BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none
@@ -257,7 +257,7 @@
         };
 
         mac_number_layer {
-            label = "MacNum";
+            display-name = "MacNum";
             bindings = <
 &none  &kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7    &kp NUMBER_8     &kp NUMBER_9  &kp NUMBER_0     &none
 &none  &kp LEFT_CONTROL  &none         &none         &kp MINUS     &kp HOME        &kp PAGE_UP    &kp LEFT_ARROW  &kp DOWN_ARROW   &kp UP_ARROW  &kp RIGHT_ARROW  &none
@@ -267,7 +267,7 @@
         };
 
         mac_function_layer {
-            label = "MacFunc";
+            display-name = "MacFunc";
             bindings = <
 &none  &kp F1               &kp F2   &kp F3          &kp F4      &kp F5              &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2        &bt BT_SEL 3  &bt BT_SEL 4  &none
 &none  &mt LEFT_CONTROL F6  &kp F7   &kp F8          &kp F9      &kp F10             &none         &to WIN_DEF      &to GAME_DEF        &none         &none         &none
@@ -277,7 +277,7 @@
         };
 
         game_default_layer {
-            label = "Game";
+            display-name = "Game";
             bindings = <
 &none  &kp TAB           &kp Q         &kp W         &kp E         &kp R           &kp F1  &kp F2  &kp F3  &kp F4  &none  &none
 &none  &kp LEFT_SHIFT    &kp A         &kp S         &kp D         &none           &none   &none   &none   &none   &none  &none
@@ -287,11 +287,11 @@
         };  
 
         game_option_layer {
-            label = "Option";
+            display-name = "Option";
             bindings = <
 &none  &kp NUMBER_5  &kp NUMBER_4  &kp NUMBER_3  &kp NUMBER_2  &kp NUMBER_1    &none  &none        &none        &none  &none  &none
 &none  &kp NUMBER_0  &kp NUMBER_9  &kp NUMBER_8  &kp NUMBER_7  &kp NUMBER_6    &none  &to WIN_DEF  &to MAC_DEF  &none  &none  &none
-&none  &kp G         &none         &none         &none         &kp B           &none  &none        &none        &none  &none  &none
+&none  &kp ESC       &none         &none         &kp G         &kp B           &none  &none        &none        &none  &none  &none
                                    &none         &trans        &trans          &none  &none        &none
             >;
         };
